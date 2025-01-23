@@ -12,5 +12,5 @@ const pairs = output.map(s => {
     }
 }).filter(p => p)
 
-fs.writeFileSync("parse.output.secret", pairs.reduce((acc, curr) => `${acc}\n${curr.email},${curr.badger_id}`, ""));
+fs.writeFileSync("parse.output.secret", pairs.reduce((acc, curr) => `${acc}\n${curr.email},${curr.badger_id}`, "email,bid"));
 console.log(`Successfully wrote ${pairs.length} bids to parse.output.secret`)
